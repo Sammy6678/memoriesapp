@@ -20,11 +20,11 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        working-directory: ./memoriesapp/backend-memories-code
+        working-directory: /backend-memories-code
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        working-directory: ./memoriesapp/backend-memories-code
+        working-directory: /backend-memories-code
         run: dotnet publish -c Release -o ${{ github.workspace }}/publish
 
       - name: Login to Azure
